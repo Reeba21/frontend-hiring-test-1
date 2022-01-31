@@ -1,17 +1,16 @@
-import { BrowserRouter , Router, Routes, Route, Link } from "react-router-dom";
+import NavigationBar from "./components/navigationBar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/home";
+import Login from "./components/login";
 import "bootstrap/dist/css/bootstrap.min.css";
-import NavigationBar from "./component/NavigationBar";
-import Login from "./component/LogIn";
-import "./App.css";
-
 export default function App() {
   return (
     <BrowserRouter>
       <NavigationBar />
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
 }
-
